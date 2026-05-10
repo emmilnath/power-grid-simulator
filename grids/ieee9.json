@@ -1,0 +1,36 @@
+{
+  "name": "IEEE 9-Bus Test System",
+  "base_mva": 100,
+  "buses": [
+    {"number": 1, "bus_type": "SLACK", "base_kv": 16.5, "v_mag": 1.04, "v_angle": 0.0},
+    {"number": 2, "bus_type": "PV",    "base_kv": 18.0, "v_mag": 1.025, "v_angle": 0.0},
+    {"number": 3, "bus_type": "PV",    "base_kv": 13.8, "v_mag": 1.025, "v_angle": 0.0},
+    {"number": 4, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0},
+    {"number": 5, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0},
+    {"number": 6, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0},
+    {"number": 7, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0},
+    {"number": 8, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0},
+    {"number": 9, "bus_type": "PQ",    "base_kv": 230.0, "v_mag": 1.0, "v_angle": 0.0}
+  ],
+  "branches": [
+    {"from_bus": 1, "to_bus": 4, "r": 0.0,    "x": 0.0576, "b": 0.0,    "tap": 1.0},
+    {"from_bus": 4, "to_bus": 5, "r": 0.017,  "x": 0.092,  "b": 0.158,  "tap": 0.0},
+    {"from_bus": 5, "to_bus": 6, "r": 0.039,  "x": 0.17,   "b": 0.358,  "tap": 0.0},
+    {"from_bus": 3, "to_bus": 6, "r": 0.0,    "x": 0.0586, "b": 0.0,    "tap": 1.0},
+    {"from_bus": 6, "to_bus": 7, "r": 0.0119, "x": 0.1008, "b": 0.209,  "tap": 0.0},
+    {"from_bus": 7, "to_bus": 8, "r": 0.0085, "x": 0.072,  "b": 0.149,  "tap": 0.0},
+    {"from_bus": 8, "to_bus": 2, "r": 0.0,    "x": 0.0625, "b": 0.0,    "tap": 1.0},
+    {"from_bus": 8, "to_bus": 9, "r": 0.032,  "x": 0.161,  "b": 0.306,  "tap": 0.0},
+    {"from_bus": 9, "to_bus": 4, "r": 0.01,   "x": 0.085,  "b": 0.176,  "tap": 0.0}
+  ],
+  "generators": [
+    {"bus": 1, "p_mw": 0.0,    "q_mvar": 0.0, "x_d": 0.0608},
+    {"bus": 2, "p_mw": 163.0,  "q_mvar": 0.0, "x_d": 0.1198},
+    {"bus": 3, "p_mw": 85.0,   "q_mvar": 0.0, "x_d": 0.1813}
+  ],
+  "loads": [
+    {"bus": 5, "p_mw": 125.0, "q_mvar": 50.0},
+    {"bus": 7, "p_mw": 90.0,  "q_mvar": 30.0},
+    {"bus": 9, "p_mw": 100.0, "q_mvar": 35.0}
+  ]
+}
